@@ -1,0 +1,1390 @@
+{
+  "chunks": 41,
+  "documents": 20,
+  "per_question": [
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seed-dispersal",
+          "storms",
+          "seasons",
+          "pollination",
+          "wind-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      },
+      "expected_doc": "photosynthesis",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seed-dispersal",
+          "storms",
+          "seasons",
+          "pollination",
+          "wind-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seasons",
+          "storms",
+          "pollination",
+          "wind-power",
+          "seed-dispersal"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      },
+      "id": "b01-absorb",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seed-dispersal",
+          "storms",
+          "seasons",
+          "pollination",
+          "wind-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "storms",
+          "seasons",
+          "ocean-tides",
+          "gravity",
+          "pollination",
+          "hydro-power",
+          "rivers-and-lakes",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      },
+      "expected_doc": "water-cycle",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "storms",
+          "ocean-tides",
+          "seasons",
+          "rivers-and-lakes",
+          "gravity",
+          "hydro-power",
+          "pollination",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "storms",
+          "ocean-tides",
+          "gravity",
+          "seasons",
+          "hydro-power",
+          "rivers-and-lakes",
+          "pollination",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      },
+      "id": "b02-clouds",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "storms",
+          "ocean-tides",
+          "rivers-and-lakes",
+          "hydro-power",
+          "seasons",
+          "gravity",
+          "pollination",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "gravity",
+          "ocean-tides",
+          "storms",
+          "volcanoes",
+          "bees",
+          "water-cycle",
+          "bird-migration"
+        ],
+        "top1_doc": "gravity",
+        "top1_hit": true
+      },
+      "expected_doc": "gravity",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "gravity",
+          "ocean-tides",
+          "storms",
+          "volcanoes",
+          "bees",
+          "water-cycle",
+          "bird-migration"
+        ],
+        "top1_doc": "gravity",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "gravity",
+          "ocean-tides",
+          "bees",
+          "storms",
+          "volcanoes",
+          "water-cycle",
+          "bird-migration"
+        ],
+        "top1_doc": "gravity",
+        "top1_hit": true
+      },
+      "id": "b03-newton",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "gravity",
+          "ocean-tides",
+          "storms",
+          "volcanoes",
+          "water-cycle",
+          "bees",
+          "bird-migration"
+        ],
+        "top1_doc": "gravity",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      },
+      "expected_doc": "bees",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      },
+      "id": "b04-bees-dance",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "volcanoes",
+          "earthquakes"
+        ],
+        "top1_doc": "volcanoes",
+        "top1_hit": true
+      },
+      "expected_doc": "volcanoes",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "volcanoes",
+          "earthquakes"
+        ],
+        "top1_doc": "volcanoes",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "volcanoes",
+          "earthquakes"
+        ],
+        "top1_doc": "volcanoes",
+        "top1_hit": true
+      },
+      "id": "b05-magma",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "volcanoes",
+          "earthquakes"
+        ],
+        "top1_doc": "volcanoes",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "rivers-and-lakes",
+          "volcanoes",
+          "bees",
+          "solar-power",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      },
+      "expected_doc": "northlight-loans",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "rivers-and-lakes",
+          "volcanoes",
+          "bees",
+          "solar-power",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "rivers-and-lakes",
+          "volcanoes",
+          "bees",
+          "solar-power",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      },
+      "id": "b06-books-count",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-hours",
+          "northlight-events",
+          "pollination",
+          "volcanoes",
+          "rivers-and-lakes",
+          "solar-power",
+          "bees",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seed-dispersal",
+          "storms",
+          "seasons",
+          "earthquakes",
+          "pollination",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      },
+      "expected_doc": "photosynthesis",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seed-dispersal",
+          "storms",
+          "earthquakes",
+          "seasons",
+          "pollination",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seasons",
+          "storms",
+          "earthquakes",
+          "seed-dispersal",
+          "pollination",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      },
+      "id": "b07-oxygen",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "photosynthesis",
+          "seed-dispersal",
+          "storms",
+          "earthquakes",
+          "seasons",
+          "pollination",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "photosynthesis",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "ocean-tides",
+          "seasons",
+          "hydro-power",
+          "rivers-and-lakes",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      },
+      "expected_doc": "water-cycle",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "ocean-tides",
+          "rivers-and-lakes",
+          "seasons",
+          "hydro-power",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "ocean-tides",
+          "seasons",
+          "hydro-power",
+          "rivers-and-lakes",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      },
+      "id": "b08-evaporation",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "water-cycle",
+          "ocean-tides",
+          "rivers-and-lakes",
+          "hydro-power",
+          "seasons",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "water-cycle",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "ocean-tides",
+          "water-cycle",
+          "gravity",
+          "salmon-run",
+          "hydro-power",
+          "rivers-and-lakes",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "ocean-tides",
+        "top1_hit": true
+      },
+      "expected_doc": "ocean-tides",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "ocean-tides",
+          "water-cycle",
+          "gravity",
+          "rivers-and-lakes",
+          "hydro-power",
+          "salmon-run",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "ocean-tides",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "ocean-tides",
+          "water-cycle",
+          "gravity",
+          "hydro-power",
+          "rivers-and-lakes",
+          "salmon-run",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "ocean-tides",
+        "top1_hit": true
+      },
+      "id": "b09-tide",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "ocean-tides",
+          "water-cycle",
+          "gravity",
+          "rivers-and-lakes",
+          "hydro-power",
+          "salmon-run",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "ocean-tides",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "pollination",
+          "bees",
+          "seed-dispersal",
+          "photosynthesis",
+          "seasons",
+          "northlight-events",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "pollination",
+        "top1_hit": true
+      },
+      "expected_doc": "pollination",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "pollination",
+          "bees",
+          "seed-dispersal",
+          "photosynthesis",
+          "seasons",
+          "northlight-events",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "pollination",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 2,
+        "ranked_docs": [
+          "bees",
+          "pollination",
+          "seed-dispersal",
+          "photosynthesis",
+          "seasons",
+          "northlight-events",
+          "wind-power",
+          "solar-power"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": false
+      },
+      "id": "b10-pollen",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "pollination",
+          "bees",
+          "seed-dispersal",
+          "photosynthesis",
+          "seasons",
+          "wind-power",
+          "northlight-events",
+          "solar-power"
+        ],
+        "top1_doc": "pollination",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seed-dispersal",
+          "bird-migration",
+          "pollination",
+          "photosynthesis",
+          "seasons"
+        ],
+        "top1_doc": "seed-dispersal",
+        "top1_hit": true
+      },
+      "expected_doc": "seed-dispersal",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seed-dispersal",
+          "bird-migration",
+          "photosynthesis",
+          "pollination",
+          "seasons"
+        ],
+        "top1_doc": "seed-dispersal",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seed-dispersal",
+          "bird-migration",
+          "pollination",
+          "photosynthesis",
+          "seasons"
+        ],
+        "top1_doc": "seed-dispersal",
+        "top1_hit": true
+      },
+      "id": "b11-light-seeds",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seed-dispersal",
+          "photosynthesis",
+          "bird-migration",
+          "pollination",
+          "seasons"
+        ],
+        "top1_doc": "seed-dispersal",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "earthquakes",
+          "pollination",
+          "volcanoes",
+          "bird-migration",
+          "solar-power"
+        ],
+        "top1_doc": "earthquakes",
+        "top1_hit": true
+      },
+      "expected_doc": "earthquakes",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "earthquakes",
+          "pollination",
+          "volcanoes",
+          "bird-migration",
+          "solar-power"
+        ],
+        "top1_doc": "earthquakes",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "earthquakes",
+          "pollination",
+          "volcanoes",
+          "bird-migration",
+          "solar-power"
+        ],
+        "top1_doc": "earthquakes",
+        "top1_hit": true
+      },
+      "id": "b12-epicentre",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "earthquakes",
+          "pollination",
+          "volcanoes",
+          "bird-migration",
+          "solar-power"
+        ],
+        "top1_doc": "earthquakes",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "solar-power",
+          "photosynthesis",
+          "earthquakes"
+        ],
+        "top1_doc": "solar-power",
+        "top1_hit": true
+      },
+      "expected_doc": "solar-power",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "solar-power",
+          "photosynthesis",
+          "earthquakes"
+        ],
+        "top1_doc": "solar-power",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "solar-power",
+          "photosynthesis",
+          "earthquakes"
+        ],
+        "top1_doc": "solar-power",
+        "top1_hit": true
+      },
+      "id": "b13-photovoltaic",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "solar-power",
+          "photosynthesis",
+          "earthquakes"
+        ],
+        "top1_doc": "solar-power",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "wind-power",
+          "hydro-power",
+          "storms",
+          "solar-power",
+          "photosynthesis",
+          "pollination",
+          "salmon-run",
+          "seed-dispersal",
+          "bird-migration"
+        ],
+        "top1_doc": "wind-power",
+        "top1_hit": true
+      },
+      "expected_doc": "wind-power",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "wind-power",
+          "hydro-power",
+          "storms",
+          "solar-power",
+          "photosynthesis",
+          "pollination",
+          "seed-dispersal",
+          "salmon-run",
+          "bird-migration"
+        ],
+        "top1_doc": "wind-power",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "wind-power",
+          "hydro-power",
+          "storms",
+          "solar-power",
+          "photosynthesis",
+          "pollination",
+          "seed-dispersal",
+          "salmon-run",
+          "bird-migration"
+        ],
+        "top1_doc": "wind-power",
+        "top1_hit": true
+      },
+      "id": "b14-turbine-blades",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "wind-power",
+          "hydro-power",
+          "storms",
+          "solar-power",
+          "photosynthesis",
+          "pollination",
+          "seed-dispersal",
+          "bird-migration",
+          "salmon-run"
+        ],
+        "top1_doc": "wind-power",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "hydro-power",
+          "wind-power",
+          "storms",
+          "gravity",
+          "ocean-tides"
+        ],
+        "top1_doc": "hydro-power",
+        "top1_hit": true
+      },
+      "expected_doc": "hydro-power",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "hydro-power",
+          "wind-power",
+          "storms",
+          "gravity",
+          "ocean-tides"
+        ],
+        "top1_doc": "hydro-power",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "hydro-power",
+          "wind-power",
+          "gravity",
+          "ocean-tides",
+          "storms"
+        ],
+        "top1_doc": "hydro-power",
+        "top1_hit": true
+      },
+      "id": "b15-hydro-gates",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "hydro-power",
+          "wind-power",
+          "storms",
+          "gravity",
+          "ocean-tides"
+        ],
+        "top1_doc": "hydro-power",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-hours",
+          "northlight-events",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-hours",
+        "top1_hit": true
+      },
+      "expected_doc": "northlight-hours",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-hours",
+          "northlight-events",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-hours",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-hours",
+          "northlight-events",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-hours",
+        "top1_hit": true
+      },
+      "id": "b16-close-time",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-hours",
+          "northlight-events",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-hours",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-events",
+          "northlight-hours",
+          "photosynthesis",
+          "salmon-run",
+          "seasons",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-events",
+        "top1_hit": true
+      },
+      "expected_doc": "northlight-events",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-events",
+          "northlight-hours",
+          "photosynthesis",
+          "salmon-run",
+          "seasons",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-events",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-events",
+          "northlight-hours",
+          "photosynthesis",
+          "seasons",
+          "salmon-run",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-events",
+        "top1_hit": true
+      },
+      "id": "b17-storytime",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-events",
+          "northlight-hours",
+          "photosynthesis",
+          "salmon-run",
+          "seasons",
+          "northlight-loans"
+        ],
+        "top1_doc": "northlight-events",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bird-migration",
+          "salmon-run"
+        ],
+        "top1_doc": "bird-migration",
+        "top1_hit": true
+      },
+      "expected_doc": "bird-migration",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bird-migration",
+          "salmon-run"
+        ],
+        "top1_doc": "bird-migration",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bird-migration",
+          "salmon-run"
+        ],
+        "top1_doc": "bird-migration",
+        "top1_hit": true
+      },
+      "id": "b18-navigate",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bird-migration",
+          "salmon-run"
+        ],
+        "top1_doc": "bird-migration",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "salmon-run",
+          "bees",
+          "rivers-and-lakes",
+          "storms",
+          "solar-power",
+          "northlight-loans",
+          "pollination",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "salmon-run",
+        "top1_hit": true
+      },
+      "expected_doc": "salmon-run",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "salmon-run",
+          "bees",
+          "pollination",
+          "rivers-and-lakes",
+          "storms",
+          "seed-dispersal",
+          "solar-power",
+          "photosynthesis",
+          "northlight-loans"
+        ],
+        "top1_doc": "salmon-run",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "salmon-run",
+          "pollination",
+          "bees",
+          "storms",
+          "seed-dispersal",
+          "rivers-and-lakes",
+          "solar-power",
+          "photosynthesis",
+          "northlight-loans"
+        ],
+        "top1_doc": "salmon-run",
+        "top1_hit": true
+      },
+      "id": "b19-salmon-eggs",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "salmon-run",
+          "pollination",
+          "seed-dispersal",
+          "bees",
+          "photosynthesis",
+          "rivers-and-lakes",
+          "storms",
+          "solar-power",
+          "northlight-loans"
+        ],
+        "top1_doc": "salmon-run",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "storms"
+        ],
+        "top1_doc": "storms",
+        "top1_hit": true
+      },
+      "expected_doc": "storms",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "storms"
+        ],
+        "top1_doc": "storms",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "storms"
+        ],
+        "top1_doc": "storms",
+        "top1_hit": true
+      },
+      "id": "b20-thunder",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "storms"
+        ],
+        "top1_doc": "storms",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seasons",
+          "bird-migration",
+          "bees",
+          "gravity",
+          "volcanoes",
+          "earthquakes",
+          "water-cycle"
+        ],
+        "top1_doc": "seasons",
+        "top1_hit": true
+      },
+      "expected_doc": "seasons",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seasons",
+          "bird-migration",
+          "bees",
+          "gravity",
+          "volcanoes",
+          "earthquakes",
+          "water-cycle"
+        ],
+        "top1_doc": "seasons",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seasons",
+          "bird-migration",
+          "gravity",
+          "bees",
+          "volcanoes",
+          "water-cycle",
+          "earthquakes"
+        ],
+        "top1_doc": "seasons",
+        "top1_hit": true
+      },
+      "id": "b21-seasons-tilt",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "seasons",
+          "bird-migration",
+          "bees",
+          "gravity",
+          "water-cycle",
+          "earthquakes",
+          "volcanoes"
+        ],
+        "top1_doc": "seasons",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "rivers-and-lakes",
+          "bees",
+          "salmon-run",
+          "pollination",
+          "northlight-loans",
+          "seed-dispersal",
+          "water-cycle",
+          "hydro-power"
+        ],
+        "top1_doc": "rivers-and-lakes",
+        "top1_hit": true
+      },
+      "expected_doc": "rivers-and-lakes",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "rivers-and-lakes",
+          "salmon-run",
+          "bees",
+          "pollination",
+          "northlight-loans",
+          "seed-dispersal",
+          "water-cycle",
+          "hydro-power"
+        ],
+        "top1_doc": "rivers-and-lakes",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "rivers-and-lakes",
+          "bees",
+          "pollination",
+          "salmon-run",
+          "northlight-loans",
+          "seed-dispersal",
+          "water-cycle",
+          "hydro-power"
+        ],
+        "top1_doc": "rivers-and-lakes",
+        "top1_hit": true
+      },
+      "id": "b22-valleys",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "rivers-and-lakes",
+          "salmon-run",
+          "bees",
+          "pollination",
+          "northlight-loans",
+          "water-cycle",
+          "seed-dispersal",
+          "hydro-power"
+        ],
+        "top1_doc": "rivers-and-lakes",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "rivers-and-lakes",
+          "volcanoes",
+          "bees",
+          "solar-power",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      },
+      "expected_doc": "northlight-loans",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "rivers-and-lakes",
+          "volcanoes",
+          "bees",
+          "solar-power",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "rivers-and-lakes",
+          "volcanoes",
+          "bees",
+          "solar-power",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      },
+      "id": "b23-loan-weeks",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "northlight-loans",
+          "northlight-events",
+          "northlight-hours",
+          "pollination",
+          "volcanoes",
+          "rivers-and-lakes",
+          "solar-power",
+          "bees",
+          "bird-migration"
+        ],
+        "top1_doc": "northlight-loans",
+        "top1_hit": true
+      }
+    },
+    {
+      "bm25": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination",
+          "salmon-run",
+          "water-cycle",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      },
+      "expected_doc": "bees",
+      "hybrid": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination",
+          "salmon-run",
+          "water-cycle",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      },
+      "hybrid_rerank": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination",
+          "salmon-run",
+          "water-cycle",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      },
+      "id": "b24-bees-collect",
+      "vector": {
+        "rank_of_expected": 1,
+        "ranked_docs": [
+          "bees",
+          "pollination",
+          "salmon-run",
+          "water-cycle",
+          "seed-dispersal",
+          "photosynthesis"
+        ],
+        "top1_doc": "bees",
+        "top1_hit": true
+      }
+    }
+  ],
+  "questions": 24,
+  "summary": {
+    "bm25": {
+      "mrr": 1.0,
+      "n": 24,
+      "recall_at_3": 1.0,
+      "top1_accuracy": 1.0
+    },
+    "hybrid": {
+      "mrr": 1.0,
+      "n": 24,
+      "recall_at_3": 1.0,
+      "top1_accuracy": 1.0
+    },
+    "hybrid_rerank": {
+      "mrr": 0.9791666666666666,
+      "n": 24,
+      "recall_at_3": 1.0,
+      "top1_accuracy": 0.9583333333333334
+    },
+    "vector": {
+      "mrr": 1.0,
+      "n": 24,
+      "recall_at_3": 1.0,
+      "top1_accuracy": 1.0
+    }
+  },
+  "topics": [
+    "animals",
+    "earth",
+    "energy",
+    "library",
+    "plants",
+    "water",
+    "weather"
+  ]
+}

@@ -14,3 +14,7 @@ jobs:
         run: python -m unittest discover -s tests -p "test_learn*.py" -v
       - name: level 1 question run
         run: python level-1-learn/run_rag.py
+      - name: level 2 build tests
+        run: python -m unittest discover -s tests -p "test_build*.py" -v
+      - name: level 2 build ablation run
+        run: python level-2-build/run_build.py
