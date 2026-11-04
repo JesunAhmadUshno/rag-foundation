@@ -1,0 +1,278 @@
+[
+ {
+  "id": "b01-absorb",
+  "category": "regression",
+  "question": "What gas do plants absorb from the air for photosynthesis?",
+  "expected_doc": "photosynthesis"
+ },
+ {
+  "id": "b02-clouds",
+  "category": "regression",
+  "question": "What process forms clouds in the water cycle?",
+  "expected_doc": "water-cycle"
+ },
+ {
+  "id": "b03-newton",
+  "category": "regression",
+  "question": "Who described gravity as a universal attraction between masses?",
+  "expected_doc": "gravity"
+ },
+ {
+  "id": "b04-bees-dance",
+  "category": "regression",
+  "question": "How do bees communicate the location of flowers?",
+  "expected_doc": "bees"
+ },
+ {
+  "id": "b05-magma",
+  "category": "regression",
+  "question": "What does magma become when it reaches the surface?",
+  "expected_doc": "volcanoes"
+ },
+ {
+  "id": "b06-books-count",
+  "category": "regression",
+  "question": "How many books can members borrow from the Northlight library?",
+  "expected_doc": "northlight-loans"
+ },
+ {
+  "id": "b07-oxygen",
+  "category": "regression",
+  "question": "What do plants release into the air during photosynthesis?",
+  "expected_doc": "photosynthesis"
+ },
+ {
+  "id": "b08-evaporation",
+  "category": "regression",
+  "question": "What causes evaporation in the water cycle?",
+  "expected_doc": "water-cycle"
+ },
+ {
+  "id": "b09-tide",
+  "category": "regression",
+  "question": "What pulls on ocean water to cause a high tide?",
+  "expected_doc": "ocean-tides"
+ },
+ {
+  "id": "b10-pollen",
+  "category": "regression",
+  "question": "What carries pollen from flower to flower so pollination can happen?",
+  "expected_doc": "pollination"
+ },
+ {
+  "id": "b11-light-seeds",
+  "category": "regression",
+  "question": "How do light seeds with wings travel away from the parent plant?",
+  "expected_doc": "seed-dispersal"
+ },
+ {
+  "id": "b12-epicentre",
+  "category": "regression",
+  "question": "What is the place on the surface above where an earthquake slip starts called?",
+  "expected_doc": "earthquakes"
+ },
+ {
+  "id": "b13-photovoltaic",
+  "category": "regression",
+  "question": "What do photovoltaic cells release when sunlight strikes them in a solar panel?",
+  "expected_doc": "solar-power"
+ },
+ {
+  "id": "b14-turbine-blades",
+  "category": "regression",
+  "question": "What spins the blades of a wind turbine to make electricity?",
+  "expected_doc": "wind-power"
+ },
+ {
+  "id": "b15-hydro-gates",
+  "category": "regression",
+  "question": "How do hydro stations raise or lower output quickly?",
+  "expected_doc": "hydro-power"
+ },
+ {
+  "id": "b16-close-time",
+  "category": "regression",
+  "question": "What time does the Northlight library close on weekdays?",
+  "expected_doc": "northlight-hours"
+ },
+ {
+  "id": "b17-storytime",
+  "category": "regression",
+  "question": "When does storytime for young children happen at the Northlight library?",
+  "expected_doc": "northlight-events"
+ },
+ {
+  "id": "b18-navigate",
+  "category": "regression",
+  "question": "How do birds navigate during migration?",
+  "expected_doc": "bird-migration"
+ },
+ {
+  "id": "b19-salmon-eggs",
+  "category": "regression",
+  "question": "Where do salmon lay their eggs when they reach their home stream?",
+  "expected_doc": "salmon-run"
+ },
+ {
+  "id": "b20-thunder",
+  "category": "regression",
+  "question": "What is thunder the sound of during a storm?",
+  "expected_doc": "storms"
+ },
+ {
+  "id": "b21-seasons-tilt",
+  "category": "regression",
+  "question": "Why does the northern half of the earth get summer while the southern half gets winter?",
+  "expected_doc": "seasons"
+ },
+ {
+  "id": "b22-valleys",
+  "category": "regression",
+  "question": "What do rivers carry downstream as they shape valleys?",
+  "expected_doc": "rivers-and-lakes"
+ },
+ {
+  "id": "b23-loan-weeks",
+  "category": "regression",
+  "question": "For how many weeks can members borrow books at the Northlight library?",
+  "expected_doc": "northlight-loans"
+ },
+ {
+  "id": "b24-bees-collect",
+  "category": "regression",
+  "question": "What do honey bees collect from flowers to feed their colony?",
+  "expected_doc": "bees"
+ },
+ {
+  "id": "p01-condensation",
+  "category": "paraphrase",
+  "question": "How does moisture in the atmosphere become droplets that gather overhead?",
+  "expected_doc": "water-cycle"
+ },
+ {
+  "id": "p02-molten",
+  "category": "paraphrase",
+  "question": "What do you call hot liquid rock while it is subterranean, and after it emerges?",
+  "expected_doc": "volcanoes"
+ },
+ {
+  "id": "p03-rumble",
+  "category": "paraphrase",
+  "question": "What creates the rumble heard after a flash of electrical discharge?",
+  "expected_doc": "storms"
+ },
+ {
+  "id": "p04-tremor-spot",
+  "category": "paraphrase",
+  "question": "What term names the surface location directly overhead a tremor origin?",
+  "expected_doc": "earthquakes"
+ },
+ {
+  "id": "p05-storytelling",
+  "category": "paraphrase",
+  "question": "When is the weekly storytelling gathering for youngsters at Northlight?",
+  "expected_doc": "northlight-events"
+ },
+ {
+  "id": "p06-byproduct",
+  "category": "paraphrase",
+  "question": "Which airborne byproduct do leafy plants emit while manufacturing nourishment?",
+  "expected_doc": "photosynthesis"
+ },
+ {
+  "id": "p07-propagules",
+  "category": "paraphrase",
+  "question": "How are lightweight propagules with tiny hairs scattered across fields by moving air?",
+  "expected_doc": "seed-dispersal"
+ },
+ {
+  "id": "p08-stigma",
+  "category": "paraphrase",
+  "question": "When pollen grains reach the female organ of a matching bloom, what process can start?",
+  "expected_doc": "pollination"
+ },
+ {
+  "id": "p09-debris",
+  "category": "paraphrase",
+  "question": "What debris do streams transport while carving out valleys?",
+  "expected_doc": "rivers-and-lakes"
+ },
+ {
+  "id": "p10-blossom-location",
+  "category": "paraphrase",
+  "question": "How do honey insects communicate blossom coordinates to hive mates?",
+  "expected_doc": "bees"
+ },
+ {
+  "id": "m01-waggle-process",
+  "category": "multihop",
+  "question": "A waggle dance tells colony members where flowers are. What plant process do those visitors help while feeding?",
+  "expected_docs": [
+   "bees",
+   "pollination"
+  ]
+ },
+ {
+  "id": "m02-newton-coasts",
+  "category": "multihop",
+  "question": "Newton described a universal attraction between masses. What does that attraction cause on coasts twice each day?",
+  "expected_docs": [
+   "gravity",
+   "ocean-tides"
+  ]
+ },
+ {
+  "id": "m03-loans-hours",
+  "category": "multihop",
+  "question": "Members can borrow ten books for three weeks at a library. What are that library weekday hours?",
+  "expected_docs": [
+   "northlight-loans",
+   "northlight-hours"
+  ]
+ },
+ {
+  "id": "m04-pollen-seeds",
+  "category": "multihop",
+  "question": "Pollen moving between flowers helps form something that can travel far from the parent plant. How does it travel?",
+  "expected_docs": [
+   "pollination",
+   "seed-dispersal"
+  ]
+ },
+ {
+  "id": "m05-glucose-seeds",
+  "category": "multihop",
+  "question": "Green plants make glucose using sunlight and release oxygen. Their seeds can travel on the wind with wings. Which document tells how those seeds travel?",
+  "expected_docs": [
+   "photosynthesis",
+   "seed-dispersal"
+  ]
+ },
+ {
+  "id": "m06-cells-gates",
+  "category": "multihop",
+  "question": "Photovoltaic cells release electrons when sunlight strikes them. Which other power source uses flowing water and gates to control output?",
+  "expected_docs": [
+   "solar-power",
+   "hydro-power"
+  ]
+ },
+ {
+  "id": "m07-navigate-cycle",
+  "category": "multihop",
+  "question": "Birds navigate by the sun, stars, and magnetic field on long journeys. What yearly cycle changes daylight length through the year?",
+  "expected_docs": [
+   "bird-migration",
+   "seasons"
+  ]
+ },
+ {
+  "id": "m08-salmon-waters",
+  "category": "multihop",
+  "question": "Adult salmon swim upstream and lay eggs in gravel beds. What do the waters they return to carry downstream over long years?",
+  "expected_docs": [
+   "salmon-run",
+   "rivers-and-lakes"
+  ]
+ }
+]
