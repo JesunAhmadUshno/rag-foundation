@@ -19,13 +19,15 @@ from pipeline import (  # noqa: E402
     Chunk,
     RagPipeline,
     VectorRetriever,
-    chunk_document as build_chunk_document,
     content_tokens,
     coverage_f1,
     doc_ranking,
     evaluate_rankings,
     rerank,
     rrf_fuse,
+)
+from pipeline import (  # noqa: E402
+    chunk_document as build_chunk_document,
 )
 from rag import chunk_document as learn_chunk_document  # noqa: E402
 

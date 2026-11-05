@@ -69,3 +69,27 @@ shipped ungraded.
   exist, so research and gap framing are summary grade (minus 15
   research, minus 15 gap fit); format is repo-bound (minus 15
   reach, minus 2 accuracy, minus 5 clarity).
+
+## Actions polish pack (2026-11-04)
+
+Applied through a pull request on 2026-11-04, following the Actions
+polish pack standard, backfill order P06, P05, P14. The pack adds:
+CI on a Python 3.11 and 3.12 matrix with a ruff lint step (all
+pre-existing P05 CI steps preserved: smoke, Learn tests and run,
+Build tests and run, Deep tests and run), CodeQL scanning,
+Dependabot for pip and GitHub Actions, a release workflow that
+attaches a source tarball named rag-foundation-<tag>.tar.gz to
+v* tag releases, Labeler, Greetings (snake_case inputs for
+actions/first-interaction@v3: repo_token, issue_message,
+pr_message), Stale in comment-only mode (days-before-close: -1,
+never closes), and a docs summary page at docs/index.md for
+GitHub Pages. Ruff scope is recorded in ruff.toml (E, F, I,
+line-length 120). The project runs on the Python standard
+library only; requirements.txt records that so Dependabot pip
+has a manifest to watch.
+
+| Channel | Outcome on 2026-11-04 |
+| --- | --- |
+| GitHub Pages | Docs page added at docs/index.md in this pull request. Pages enablement and live build status are verified after merge and recorded in the batch ledger; no live claim is made in this file before that check. |
+| PyPI publishing | Held: needs a PyPI token, a new credential. Jesun's tap only. Not set up. |
+| Social channels (LinkedIn, X, Facebook, Instagram, Threads) | Held: no posts made. The loop never posts to social; Threads waits for Jesun's tap per post under the standing gates. |
