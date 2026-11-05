@@ -17,13 +17,25 @@ from rag import answer_question, build_retriever  # noqa: E402
 # Hand-labelled: expected_doc is the document a human judges as the
 # source for the question, labelled before any run.
 QUESTIONS = [
-    {"id": "q01-absorb", "question": "What gas do plants absorb from the air for photosynthesis?", "expected_doc": "photosynthesis"},
+    {
+        "id": "q01-absorb",
+        "question": "What gas do plants absorb from the air for photosynthesis?",
+        "expected_doc": "photosynthesis",
+    },
     {"id": "q02-clouds", "question": "What process forms clouds in the water cycle?", "expected_doc": "water-cycle"},
-    {"id": "q03-newton", "question": "Who described gravity as a universal attraction between masses?", "expected_doc": "gravity"},
+    {
+        "id": "q03-newton",
+        "question": "Who described gravity as a universal attraction between masses?",
+        "expected_doc": "gravity",
+    },
     {"id": "q04-bees", "question": "How do bees communicate the location of flowers?", "expected_doc": "bees"},
     {"id": "q05-magma", "question": "What does magma become when it reaches the surface?", "expected_doc": "volcanoes"},
     {"id": "q06-books", "question": "How many books can members borrow from the library?", "expected_doc": "library"},
-    {"id": "q07-oxygen", "question": "What do plants release into the air during photosynthesis?", "expected_doc": "photosynthesis"},
+    {
+        "id": "q07-oxygen",
+        "question": "What do plants release into the air during photosynthesis?",
+        "expected_doc": "photosynthesis",
+    },
     {"id": "q08-evaporation", "question": "What causes evaporation in the water cycle?", "expected_doc": "water-cycle"},
 ]
 
