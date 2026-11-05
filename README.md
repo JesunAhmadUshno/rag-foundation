@@ -34,6 +34,17 @@ Project: P05. Fleet node: BlackBoxV2. Wave: Wave 2.
 | Level 2 ablation, 24 labelled questions over a 20-document, 41-chunk synthetic corpus in 7 topics, same questions and chunking in all modes (method: level-2-build/README.md), 2026-11-04 | Top-1 accuracy 1.000 for BM25 only, vector only (TF-IDF), and hybrid (RRF); 0.958 for hybrid plus rerank (23 of 24, the reranker demoted b10-pollen to rank 2). Recall at 3 is 1.000 in all four modes; MRR 1.000, 1.000, 1.000, and 0.979. |
 | Level 3 Deep evaluation, 42 labelled questions (24 regression, 10 paraphrase, 8 multi-hop) over the same corpus and chunking, Build modes against Deep modes (method: level-3-deep/README.md), 2026-11-04 | On paraphrase questions, top-1 rises from 0.500 hybrid (0.300 hybrid plus rerank) to 1.000 with query rewriting, recall at 3 and MRR 1.000; rewriting keeps regression top-1 at 1.000 (24 of 24). HyDE (lexical simulation) scores top-1 0.917 regression and 0.500 paraphrase and does not beat hybrid overall. Multi-hop pair completeness at 3 and at 5 is 1.000, the same as hybrid, with hop 2 placing the second expected document in its top 3 for 6 of 8 questions. On b10-pollen every Deep mode ranks pollination first where hybrid plus rerank ranked bees first. |
 
+## Fan-out
+
+Written fan-out set for v1.0, dated 2026-11-04, in fanout/:
+blog post (fanout/blog-post.md), step-by-step tutorial
+(fanout/tutorial.md), website page copy (fanout/website-page.md),
+LinkedIn post draft, not posted (fanout/linkedin-post.md), paper
+candidate brief for the hybrid search ablation, nothing submitted
+(fanout/paper-candidate.md), and draft release notes for v0.1, v0.5,
+and v1.0 (fanout/release-notes.md). Channel outcomes and per-piece
+publicity grades are logged in PUBLICITY.md at the repo root.
+
 ## Novelty
 
 PROPOSED. See NOVELTY.md. The novelty text is a draft until the Jev claim_check gate passes on it.
