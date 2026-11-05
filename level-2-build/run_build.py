@@ -84,7 +84,10 @@ def main():
             f"{mode:<15} {s['top1_accuracy']:.3f}  {s['recall_at_3']:.3f}"
             f"     {s['mrr']:.3f}"
         )
-    print("id              expected          bm25_top1         vector_top1       hybrid_top1       rerank_top1       rank_rerank")
+    print(
+        "id              expected          bm25_top1         vector_top1       "
+        "hybrid_top1       rerank_top1       rank_rerank"
+    )
     for row in per_question:
         print(
             f"{row['id']:<15} {row['expected_doc']:<17} "
