@@ -1,0 +1,12 @@
+{
+  "name": "rag-foundation-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 export.py && vite",
+    "build": "python3 export.py && node src/rag.check.mjs && node src/stats.check.mjs && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": { "react": "18.3.1", "react-dom": "18.3.1" },
+  "devDependencies": { "@vitejs/plugin-react": "4.3.4", "vite": "5.4.11" }
+}
