@@ -9,7 +9,9 @@ and constants as the Python pipeline. Nothing is hand-copied.
 
 import json
 import os
+import re
 import sys
+import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -37,7 +39,16 @@ data = {
         "HYDE_TERMS_PER_TERM": deep_pipeline.HYDE_TERMS_PER_TERM,
     },
     "expansions": deep_pipeline.EXPANSIONS,
+    "tests": unittest.defaultTestLoader.discover(os.path.join(ROOT, "tests")).countTestCases(),
+    "recorded": {},
 }
+
+# Date and interpreter of each recorded run, from the level README headings,
+# e.g. "## Measured results (2026-11-04, <host>, Python 3.12.3)".
+for level in ("level-2-build", "level-3-deep"):
+    with open(os.path.join(ROOT, level, "README.md"), encoding="utf-8") as fh:
+        m = re.search(r"## Measured results \((\d{4}-\d{2}-\d{2}),.*?(Python [\d.]+)\)", fh.read())
+    data["recorded"][level] = {"date": m.group(1), "python": m.group(2)}
 
 out_dir = os.path.join(HERE, "src", "data")
 os.makedirs(out_dir, exist_ok=True)
