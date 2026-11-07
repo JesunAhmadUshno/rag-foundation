@@ -181,7 +181,7 @@ export function Ablation() {
       <div className="grid3" style={{ marginTop: 12 }}>
         <div className="tile"><div className="num">p = {t1.p.toFixed(4)}</div><div className="cap">Rewrite vs hybrid, paraphrase (n {deep.category_counts.paraphrase}): {t1.onlyA} wins, {t1.onlyB} losses, exact McNemar. Paired difference {f3(d1.mean)}, bootstrap CI {f3(d1.lo)} to {f3(d1.hi)}. Large, but not significant at 0.05 with this n.</div></div>
         <div className="tile"><div className="num">p = {t2.p.toFixed(4)}</div><div className="cap">Hybrid vs hybrid + rerank, regression (n {deep.category_counts.regression}): {t2.onlyA} question differs (b10-pollen). The loss is real and named, but one question cannot show a rate.</div></div>
-        <div className="tile"><div className="num">p = {t3.p.toFixed(4)}</div><div className="cap">HyDE vs hybrid, paraphrase: {t3.onlyA} wins, {t3.onlyB} losses. No evidence the lexical HyDE helps.</div></div>
+        <div className="tile"><div className="num">p = {t3.p.toFixed(4)}</div><div className="cap">HyDE vs hybrid, paraphrase: {t3.onlyA} won, {t3.onlyB} lost. No evidence the lexical HyDE helps.</div></div>
       </div>
       <p className="hint" style={{ marginTop: 12 }}>
         Build ablation in <code>results_build.json</code> ({build.questions} questions): top-1 BM25 {f3(bs.bm25.top1_accuracy)}, vector {f3(bs.vector.top1_accuracy)}, hybrid {f3(bs.hybrid.top1_accuracy)}, hybrid + rerank {f3(bs.hybrid_rerank.top1_accuracy)}; MRR for rerank {f3(bs.hybrid_rerank.mrr)}.
@@ -349,7 +349,7 @@ export function Sweep() {
         </div>
         <span className={`pill ${isDefault ? 'good' : 'info'}`}>● {isDefault ? 'Repo defaults: matches recorded' : 'Live exploration, not a recorded result'}</span>
       </div>
-      <div className="controls">
+      <div className="controls three">
         <Range label="Chunk size (words)" value={p.chunkSize} min={15} max={80} step={5} onChange={set('chunkSize')} show={p.chunkSize} />
         <Range label="Overlap (words)" value={p.overlap} min={0} max={p.chunkSize - 5} step={5} onChange={set('overlap')} show={p.overlap} />
         <Range label="BM25 k1" value={p.k1} min={0.1} max={3} step={0.1} onChange={set('k1')} show={p.k1.toFixed(1)} />
