@@ -50,7 +50,9 @@ assert.deepEqual(vocabOverlap(pipe, repo.documents), py, 'vocab overlap');
 // Leakage probe: with the full table every paraphrase question is rank 1 (as recorded), and the
 // hybrid column equals the recorded hybrid rank.
 const para = questions.filter((q) => q.category === 'paraphrase').map((q) => q.id);
-for (const r of leaveOwnKeysOut(pipe, questions, para)) {
+const probe = leaveOwnKeysOut(pipe, questions, para);
+console.log(`leakage probe: rewrite without own keys reaches rank 1 on ${probe.filter((r) => r.without === 1).length} of ${probe.length} paraphrase questions`);
+for (const r of probe) {
   const rec = deep.per_question.find((q) => q.id === r.id).modes;
   assert.equal(r.full, rec.rewrite.ranks_of_expected[0], `${r.id} full`);
   assert.equal(r.hybrid, rec.hybrid.ranks_of_expected[0], `${r.id} hybrid`);
