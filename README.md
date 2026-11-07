@@ -2,6 +2,8 @@
 
 Retrieval-augmented generation done right: hybrid search, reranking, cited answers.
 
+Live dashboard: https://jesunahmadushno.github.io/rag-foundation/ (the pipeline running in your browser, with the recorded ablations; built from site/ by .github/workflows/pages.yml, and the build fails unless the browser port reproduces every recorded ranking).
+
 Status: LEARN DONE, BUILD DONE, and DEEP DONE 2026-11-04
 (ROADMAP-V3-BATCH, Sprint 1), Deep as a compressed Deep under the
 December Compression Protocol. Level 1 code runs with 15 passing
