@@ -15,8 +15,7 @@ import unittest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-sys.path.insert(0, os.path.join(ROOT, "level-3-deep"))
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 
 import corpus  # noqa: E402
 import deep_pipeline  # noqa: E402
@@ -43,12 +42,13 @@ data = {
     "recorded": {},
 }
 
-# Date and interpreter of each recorded run, from the level README headings,
-# e.g. "## Measured results (2026-11-04, <host>, Python 3.12.3)".
-for level in ("level-2-build", "level-3-deep"):
-    with open(os.path.join(ROOT, level, "README.md"), encoding="utf-8") as fh:
-        m = re.search(r"## Measured results \((\d{4}-\d{2}-\d{2}),.*?(Python [\d.]+)\)", fh.read())
-    data["recorded"][level] = {"date": m.group(1), "python": m.group(2)}
+# Date and interpreter of each recorded run, from the REPORT.md headings,
+# e.g. "### Deep: measured results (2026-11-04, <host>, Python 3.12.3)".
+with open(os.path.join(ROOT, "REPORT.md"), encoding="utf-8") as fh:
+    report = fh.read()
+for key, label in (("build", "Build"), ("deep", "Deep")):
+    m = re.search(rf"### {label}: measured results \((\d{{4}}-\d{{2}}-\d{{2}}),.*?(Python [\d.]+)\)", report)
+    data["recorded"][key] = {"date": m.group(1), "python": m.group(2)}
 
 out_dir = os.path.join(HERE, "src", "data")
 os.makedirs(out_dir, exist_ok=True)

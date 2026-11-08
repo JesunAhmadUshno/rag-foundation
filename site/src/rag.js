@@ -1,4 +1,4 @@
-// In-browser port of level-2-build/pipeline.py and level-3-deep/deep_pipeline.py.
+// In-browser port of src/pipeline.py and src/deep_pipeline.py.
 // Same formulas, same tie-breaks (scores descending, then chunk_id), zero scores dropped.
 // src/rag.check.mjs asserts that this port reproduces results_deep.json and results_build.json
 // exactly, so the build fails if it ever drifts from the Python.

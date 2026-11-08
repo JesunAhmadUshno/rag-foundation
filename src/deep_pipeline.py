@@ -1,7 +1,7 @@
 """Level 3, Deep: query rewriting, HyDE, and multi-hop retrieval.
 
 Python standard library only. All three mechanisms sit on top of
-the Level 2 Build hybrid pipeline (level-2-build/pipeline.py),
+the Level 2 Build hybrid pipeline (src/pipeline.py),
 which is imported unchanged, so Build behaviour stays reproducible
 for before and after comparison.
 
@@ -51,13 +51,7 @@ import os
 import sys
 from collections import Counter
 
-sys.path.insert(
-    0,
-    os.path.join(
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        "level-2-build",
-    ),
-)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pipeline import (  # noqa: E402
     RagPipeline,

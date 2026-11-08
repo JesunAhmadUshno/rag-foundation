@@ -1,56 +1,75 @@
 # rag-foundation
 
-Retrieval-augmented generation done right: hybrid search, reranking, cited answers.
+**Question.** In a dependency-free retrieval-augmented generation (RAG)
+pipeline, which retrieval steps (hybrid BM25 plus TF-IDF fusion,
+reranking, query rewriting, a lexical HyDE simulation, multi-hop)
+actually improve top-1 retrieval on a corpus whose topics share
+vocabulary?
 
-Live dashboard: https://jesunahmadushno.github.io/rag-foundation/ (the pipeline running in your browser, with the recorded ablations; built from site/ by .github/workflows/pages.yml, and the build fails unless the browser port reproduces every recorded ranking).
+**Headline.** Exploratory, not pre-registered: on 10 paraphrase questions over a 20-document synthetic corpus, deterministic query rewriting raised top-1 accuracy from 0.500 (hybrid) to 1.000, a paired gain of 0.500 (95% bootstrap interval 0.200 to 0.800) that is not significant at n = 10 (exact McNemar p = 0.0625), and only 6 of 10 questions stay at rank 1 when each question's own expansion keys are removed.
 
-Status: LEARN DONE, BUILD DONE, and DEEP DONE 2026-11-04
-(ROADMAP-V3-BATCH, Sprint 1), Deep as a compressed Deep under the
-December Compression Protocol. Level 1 code runs with 15 passing
-unit tests and one measured question run (below). Level 2 code
-runs with 20 Build unit tests (35 total) and one measured
-ablation run (below). Level 3 code runs with 17 Deep unit tests
-(52 total) and one measured Deep evaluation run (below). The
-rest of the v2 Deep scope is the v1.1 backlog in ROADMAP.md.
-The Wave 0 scaffold claim is superseded by this line.
-Project: P05. Fleet node: BlackBoxV2. Wave: Wave 2.
+**Field.** ML and AI research. **Job family.** Applied ML and AI
+engineering (retrieval and RAG). Boundary: this project builds a RAG
+system; rag-eval-harness (P06) judges one.
 
-## Start here
+**Verdict.** Functional, not pre-registered. The pipeline has run end
+to end and its recorded results regenerate byte for byte from the code
+and question sets; tests pass in CI on Python 3.11 and 3.12. No plan
+with pass lines was committed before the results, so the verdict is
+capped at Functional until the confirmatory re-run in PROPOSAL.md is
+locked and run.
 
-1. Read SPEC.md for scope and acceptance criteria.
-2. Read DOSSIER.md for the past, present, and future of this problem (v1).
-3. Read NOVELTY.md for the proposed novelty (DRAFT, pending the Jev claim_check gate).
-4. Start at level-1-learn/README.md, then level-2-build, then level-3-deep.
+Live dashboard: https://jesunahmadushno.github.io/rag-foundation/ (the
+pipeline running in your browser; the build fails unless the browser
+port reproduces every recorded ranking).
 
-## Level map
+## Reproduce
 
-- Level 1, Learn: the core idea, built small and clean, with a teaching path.
-- Level 2, Build: a real working system other people can run.
-- Level 3, Deep: benchmarks, optimization, evaluation, hard cases.
+```text
+python3 src/run_deep.py && git diff --exit-code results/
+python3 -m unittest discover -s tests -p "test_*.py" -v
+node site/src/stats.check.mjs
+python3 site/export.py && node site/src/rag.check.mjs
+```
 
-## Benchmarks
+Python 3 standard library only; Node 22 for the two uncertainty and
+leakage checks (no npm packages needed for them). `src/run_rag.py` and
+`src/run_build.py` re-run the Learn questions and the Build ablation.
+Every headline number traces to results/results_deep.json; REPORT.md
+lists which command prints which number.
 
-| Test | Result |
-| --- | --- |
-| Level 1 question run, 8 hand-labelled questions over a 6-document synthetic corpus (7 chunks, TF-IDF retrieval, extractive answers with citations; method: level-1-learn/README.md), 2026-11-04 | Top-1 accuracy 8 of 8 (1.000), recall at 3 is 8 of 8 (1.000). All 8 returned answer sentences judged correct against the corpus by reading, each with its citation. |
-| Level 2 ablation, 24 labelled questions over a 20-document, 41-chunk synthetic corpus in 7 topics, same questions and chunking in all modes (method: level-2-build/README.md), 2026-11-04 | Top-1 accuracy 1.000 for BM25 only, vector only (TF-IDF), and hybrid (RRF); 0.958 for hybrid plus rerank (23 of 24, the reranker demoted b10-pollen to rank 2). Recall at 3 is 1.000 in all four modes; MRR 1.000, 1.000, 1.000, and 0.979. |
-| Level 3 Deep evaluation, 42 labelled questions (24 regression, 10 paraphrase, 8 multi-hop) over the same corpus and chunking, Build modes against Deep modes (method: level-3-deep/README.md), 2026-11-04 | On paraphrase questions, top-1 rises from 0.500 hybrid (0.300 hybrid plus rerank) to 1.000 with query rewriting, recall at 3 and MRR 1.000; rewriting keeps regression top-1 at 1.000 (24 of 24). HyDE (lexical simulation) scores top-1 0.917 regression and 0.500 paraphrase and does not beat hybrid overall. Multi-hop pair completeness at 3 and at 5 is 1.000, the same as hybrid, with hop 2 placing the second expected document in its top 3 for 6 of 8 questions. On b10-pollen every Deep mode ranks pollination first where hybrid plus rerank ranked bees first. |
+## Lifecycle
 
-## Fan-out
+- Question: DONE 2026-11-08
+- Proposal: OPEN
+- Baseline: DONE 2026-11-04
+- Build: DONE 2026-11-04
+- Evaluate: OPEN
+- Report: OPEN
+- Review: OPEN
+- Release: OPEN
 
-Written fan-out set for v1.0, dated 2026-11-04, in fanout/:
-blog post (fanout/blog-post.md), step-by-step tutorial
-(fanout/tutorial.md), website page copy (fanout/website-page.md),
-LinkedIn post draft, not posted (fanout/linkedin-post.md), paper
-candidate brief for the hybrid search ablation, nothing submitted
-(fanout/paper-candidate.md), and draft release notes for v0.1, v0.5,
-and v1.0 (fanout/release-notes.md). Channel outcomes and per-piece
-publicity grades are logged in PUBLICITY.md at the repo root.
+The question was written at migration, after the work. The 2026-11-04
+evaluation is exploratory (REPORT.md); Evaluate, Report and Review open
+with the confirmatory re-run. The pre-standard tags v0.1, v0.5 and
+v1.0 are kept (CHANGELOG.md) but are not a release under standard v2.
 
-## Novelty
+## Layout
 
-PROPOSED. See NOVELTY.md. The novelty text is a draft until the Jev claim_check gate passes on it.
+| Path | Role | What it holds |
+| --- | --- | --- |
+| PROPOSAL.md | proposal | Why the repo is not pre-registered; confirmatory re-run (draft, not locked); the original SPEC, Build and Deep specs, novelty and dossier |
+| REPORT.md | report | Current state, questions scored with misses, Learn background, Build and Deep method and results, review findings, threats, future work |
+| src/ | code | Learn pipeline (rag.py, run_rag.py), Build corpus and hybrid pipeline (corpus.py, pipeline.py, run_build.py), Deep pipeline (deep_pipeline.py, run_deep.py) |
+| experiments/ | evidence | Labelled question sets: questions_build.json (24) and questions_deep.json (42), written 2026-11-04 |
+| results/ | results | results_build.json and results_deep.json, regenerated by src/run_build.py and src/run_deep.py; CI fails if they change |
+| tests/ | tests | 52 unit tests (Learn, Build, Deep) and the layout test |
+| docs/decisions/ | decisions | Standard library only (0001), Deep skips the reranker (0002), multi-hop union (0003) |
+| docs/fanout/ | outreach | Dated drafts from 2026-11-04 (blog, tutorial, website copy, LinkedIn draft, paper brief, release notes) and their channel log |
+| site/ | dashboard | Browser port of the pipeline with parity, uncertainty and leakage checks, built by .github/workflows/pages.yml |
+| CHANGELOG.md, CITATION.cff, SECURITY.md, LICENSE | release | Change history, citation, security contact, licence |
 
 ## License
 
-Code: Apache-2.0 (see LICENSE). Tutorials: CC BY 4.0. Ruled in D-V3-11, 2026-11-04.
+Code: Apache-2.0 (see LICENSE). Tutorials: CC BY 4.0. Ruled in
+D-V3-11, 2026-11-04.

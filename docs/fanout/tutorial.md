@@ -27,14 +27,14 @@ cd rag-foundation
 
 ## Step 1: Level 1, Learn, the core loop
 
-Read level-1-learn/README.md first. It explains chunking, the TF-IDF
+Read REPORT.md first. It explains chunking, the TF-IDF
 embedding, cosine retrieval, and the coverage based answer step with
 one citation per sentence.
 
 Run the Learn question set:
 
 ```text
-python level-1-learn/run_rag.py
+python src/run_rag.py
 ```
 
 Run the Learn tests:
@@ -53,7 +53,7 @@ Read your results:
 
 ## Step 2: Level 2, Build, hybrid search with reranking
 
-Read level-2-build/README.md and level-2-build/BUILD-SPEC.md. The
+Read REPORT.md and PROPOSAL.md. The
 pipeline combines BM25 (k1 = 1.5, b = 0.75) and TF-IDF cosine vector
 retrieval with reciprocal rank fusion (k = 60), then reranks the
 hybrid top 8 by query coverage, then token F1, then hybrid score.
@@ -63,7 +63,7 @@ breakdown.
 Run the Build ablation:
 
 ```text
-python level-2-build/run_build.py
+python src/run_build.py
 ```
 
 Run the Build tests:
@@ -81,23 +81,23 @@ Read your results:
 - Expected one loss: b10-pollen, where hybrid plus rerank ranks bees
   first and pollination second (expected rank 2). Keep this case in
   mind. Deep addresses it.
-- The runner writes level-2-build/results_build.json.
+- The runner writes results/results_build.json.
 - The demo query at the end returns the Northlight loans sentence
   with citation northlight-loans-c0, first at every stage.
 - Expected tests: 20 Build tests, all passing.
 
 ## Step 3: Level 3, Deep, rewriting, HyDE, and multi-hop
 
-Read level-3-deep/README.md and level-3-deep/DEEP-SPEC.md. This is a
+Read REPORT.md and PROPOSAL.md. This is a
 compressed Deep: the full SPEC Deep scope in lexical form
 (deterministic query rewriting, a co-occurrence HyDE simulation, and
 bridge term multi-hop retrieval). The rest of the v2 Deep scope is
-the v1.1 backlog in ROADMAP.md at the repo root.
+the v1.1 backlog in REPORT.md at the repo root.
 
 Run the Deep evaluation:
 
 ```text
-python level-3-deep/run_deep.py
+python src/run_deep.py
 ```
 
 Run the Deep tests:
@@ -121,7 +121,7 @@ Read your results:
 - Expected b10-pollen line: every Deep mode ranks pollination first.
   For the rewrite, multi-hop, and combined modes the fix is by
   subtraction: they run hybrid without the Build reranker.
-- The runner writes level-3-deep/results_deep.json. It was run twice
+- The runner writes results/results_deep.json. It was run twice
   at v1.0 and produced identical results both times.
 - Expected tests: 17 Deep tests, all passing.
 

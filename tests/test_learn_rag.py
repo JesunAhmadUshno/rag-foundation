@@ -1,5 +1,5 @@
 """Level 1 Learn tests. Every expected value below was computed by
-hand from the formulas in level-1-learn/rag.py before the code ran.
+hand from the formulas in src/rag.py before the code ran.
 Run: python -m unittest discover -s tests -p "test_learn*.py" -v
 """
 import math
@@ -8,7 +8,7 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-1-learn"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 
 from rag import (  # noqa: E402
     Chunk,

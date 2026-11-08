@@ -66,7 +66,7 @@ URL: https://github.com/JesunAhmadUshno/rag-foundation/releases/tag/v1.0
   (hybrid without the Build reranker).
 - Evaluation set: 42 labelled questions (24 regression, 10
   paraphrase, 8 multi-hop) over the same 20-document, 41-chunk
-  corpus. Full traces are in level-3-deep/results_deep.json.
+  corpus. Full traces are in results/results_deep.json.
 - Tests: 17 Deep unit tests, 52 in total with Learn and Build.
-- The rest of the v2 Deep scope is the v1.1 backlog in ROADMAP.md.
+- The rest of the v2 Deep scope is the v1.1 backlog in REPORT.md.
   It is not part of v1.0 and is not claimed by these notes.

@@ -1,6 +1,6 @@
 """Run the Level 1 RAG pipeline on hand-labelled questions.
 
-Usage: python level-1-learn/run_rag.py
+Usage: python src/run_rag.py
 Prints, per question: the retrieved chunks with scores, the
 extractive answer, the citation for each answer sentence, and
 whether the expected source document was retrieved (top 1 and

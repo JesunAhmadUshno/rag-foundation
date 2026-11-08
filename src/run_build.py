@@ -1,13 +1,13 @@
 """Run the Level 2 Build ablation and a demo query.
 
-Usage: python level-2-build/run_build.py
+Usage: python src/run_build.py
 
 Ablation: the SAME 24 labelled questions and the SAME chunking are
 run through four modes: BM25 only, vector only (TF-IDF cosine),
 hybrid (reciprocal rank fusion), and hybrid plus rerank. Per mode
 the runner reports top-1 accuracy, recall at 3, and MRR at document
-level, and writes the full per-question table to results_build.json
-beside this file. Exit code 0 when the run completes: a miss is
+level, and writes the full per-question table to
+results/results_build.json. Exit code 0 when the run completes: a miss is
 data, and the summary prints either way.
 """
 
@@ -16,6 +16,7 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
 from corpus import DOCUMENTS  # noqa: E402
@@ -25,7 +26,7 @@ MODES = ("bm25", "vector", "hybrid", "hybrid_rerank")
 
 
 def load_questions():
-    with open(os.path.join(HERE, "questions.json"), encoding="utf-8") as fh:
+    with open(os.path.join(ROOT, "experiments", "questions_build.json"), encoding="utf-8") as fh:
         return json.load(fh)
 
 
@@ -105,7 +106,7 @@ def main():
         "summary": summary,
         "per_question": per_question,
     }
-    out_path = os.path.join(HERE, "results_build.json")
+    out_path = os.path.join(ROOT, "results", "results_build.json")
     with open(out_path, "w", encoding="utf-8") as fh:
         json.dump(results, fh, indent=2, sort_keys=True)
     print(f"results written: {out_path}")
