@@ -46,7 +46,7 @@ quality.
 - The Build reranker measured worse on this set and that result is
   kept in the record.
 - Compressed Deep is not the full v2 Deep scope. The remainder is
-  the v1.1 backlog in the repo ROADMAP.md.
+  the v1.1 backlog in the repo REPORT.md.
 
 ## Links
 
@@ -54,8 +54,8 @@ quality.
 - Release v0.1 (Learn): https://github.com/JesunAhmadUshno/rag-foundation/releases/tag/v0.1
 - Release v0.5 (Build): https://github.com/JesunAhmadUshno/rag-foundation/releases/tag/v0.5
 - Release v1.0 (Learn, Build, compressed Deep): https://github.com/JesunAhmadUshno/rag-foundation/releases/tag/v1.0
-- Tutorial: fanout/tutorial.md in the GitHub repo
-- Blog post draft: fanout/blog-post.md in the GitHub repo
+- Tutorial: docs/fanout/tutorial.md in the GitHub repo
+- Blog post draft: docs/fanout/blog-post.md in the GitHub repo
 
 ## License note
 

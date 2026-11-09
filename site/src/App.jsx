@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import roadmapMd from '../../ROADMAP.md?raw';
-import deepReadme from '../../level-3-deep/README.md?raw';
+import reportMd from '../../REPORT.md?raw';
 import { repo, deep, build, questions, pipe, C, f3, REPO, blob, CAT_LABEL, expectedOf, topicOf, Recorded } from './common.jsx';
 import { vocabOverlap } from './rag.js';
 import { mcnemarExact } from './stats.js';
@@ -28,9 +27,9 @@ function MenuBar() {
     <div className="menubar" role="banner">
       <span className="apple" aria-hidden="true">◆</span>
       <a className="app" href="#top">RAG Foundation</a>
-      <a className="m" href={blob('level-2-build/README.md')}>Build</a>
-      <a className="m" href={blob('level-3-deep/README.md')}>Deep</a>
-      <a className="m" href={blob('ROADMAP.md')}>Roadmap</a>
+      <a className="m" href={blob('REPORT.md')}>Report</a>
+      <a className="m" href={blob('PROPOSAL.md')}>Proposal</a>
+      <a className="m" href={blob('CHANGELOG.md')}>Changelog</a>
       <span className="spacer" />
       <span className="status"><i /> {repo.tests} tests · parity gated</span>
       <a href={REPO}>GitHub ↗</a>
@@ -100,7 +99,7 @@ function Hero() {
       <div className="actions">
         <a className="btn primary" href="#playground">Try the query playground</a>
         <a className="btn ghost" href="#limits">Read the limits first</a>
-        <span className="hint">Reproduce with <code>python3 level-3-deep/run_deep.py</code></span>
+        <span className="hint">Reproduce with <code>python3 src/run_deep.py</code></span>
       </div>
       <div className="tiles">
         <div className="tile"><div className="num">{f3(s.paraphrase.rewrite.top1_accuracy)}</div><div className="cap">Paraphrase top-1 with rewriting, up from {f3(s.paraphrase.hybrid.top1_accuracy)} for hybrid (n = {deep.category_counts.paraphrase})</div></div>
@@ -238,8 +237,8 @@ const listItems = (md) => md.split('\n').reduce((acc, line) => {
   return acc;
 }, []);
 const section = (md, start, end) => md.slice(md.indexOf(start) + start.length, end ? md.indexOf(end, md.indexOf(start)) : undefined);
-const backlog = listItems(section(roadmapMd, '## v1.1 backlog', '## Standing rules'));
-const limits = listItems(section(deepReadme, '## Limits, stated plainly', 'Summary claim:'))
+const backlog = listItems(section(reportMd, '## v1.1 backlog', '## Standing rules'));
+const limits = listItems(section(reportMd, '### Deep limits, stated plainly', 'Summary claim:'))
   .filter((l) => !/VM|fleet node/i.test(l)); // drops a note about which machine ran the job; not a research limit
 
 function Limits() {
@@ -252,7 +251,7 @@ function Limits() {
     'Answers are judged by reading. There is no answer-level metric and a single author labelled every question.',
   ];
   return (
-    <section id="limits" className="card window reveal" data-title="ROADMAP.md — limits and backlog">
+    <section id="limits" className="card window reveal" data-title="REPORT.md — limits and backlog">
       <p className="eyebrow">Limits and roadmap</p>
       <h2>What this does <em>not</em> show.</h2>
       <div className="grid2" style={{ marginTop: 16 }}>
@@ -273,9 +272,8 @@ function Limits() {
         </div>
       </div>
       <div className="docs" style={{ marginTop: 20 }}>
-        {[['level-2-build/README.md', 'Build write-up', `Ablation on ${build.questions} questions`], ['level-3-deep/README.md', 'Deep write-up', `${deep.questions} questions, failure modes`],
-          ['docs/research-review.md', 'Research review', 'Rubric grades and open gaps'], ['SPEC.md', 'Spec', 'Scope and acceptance'],
-          ['NOVELTY.md', 'Novelty (draft)', 'Not yet measured against prior art'], ['ROADMAP.md', 'Roadmap', 'v1.1 backlog and standing rules']]
+        {[['REPORT.md', 'Report', `Build ablation on ${build.questions} questions; Deep on ${deep.questions}, failure modes, review findings, backlog`],
+          ['PROPOSAL.md', 'Proposal', 'Original scope and specs; confirmatory plan (draft, not locked)'], ['CHANGELOG.md', 'Changelog', 'What changed and when']]
           .map(([p, t, d]) => <a key={p} href={blob(p)}><b>{t}</b><small>{d}</small></a>)}
       </div>
       <p className="hint" style={{ marginTop: 16 }}>Categories: {Object.entries(deep.category_counts).map(([c, n]) => `${CAT_LABEL[c]} ${n}`).join(' · ')}.</p>

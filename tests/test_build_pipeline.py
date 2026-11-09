@@ -1,5 +1,5 @@
 """Level 2 Build tests. Expected values were computed by hand from
-the formulas in level-2-build/pipeline.py before assertions were
+the formulas in src/pipeline.py before assertions were
 written (the BM25 and RRF arithmetic is worked in the comments).
 Run: python -m unittest discover -s tests -p "test_build*.py" -v
 """
@@ -10,8 +10,7 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
-sys.path.insert(0, os.path.join(ROOT, "level-1-learn"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 
 from corpus import DOCUMENTS  # noqa: E402
 from pipeline import (  # noqa: E402
@@ -161,7 +160,7 @@ class TestCorpusAndQuestions(unittest.TestCase):
 
     def test_questions_labelled_and_answerable(self):
         with open(
-            os.path.join(ROOT, "level-2-build", "questions.json"),
+            os.path.join(ROOT, "experiments", "questions_build.json"),
             encoding="utf-8",
         ) as fh:
             questions = json.load(fh)

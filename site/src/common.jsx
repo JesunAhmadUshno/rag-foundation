@@ -1,8 +1,8 @@
 import { useId } from 'react';
 import repo from './data/repo.json';
-import deep from '../../level-3-deep/results_deep.json';
-import build from '../../level-2-build/results_build.json';
-import questions from '../../level-3-deep/questions_deep.json';
+import deep from '../../results/results_deep.json';
+import build from '../../results/results_build.json';
+import questions from '../../experiments/questions_deep.json';
 import { createPipeline } from './rag.js';
 
 export { repo, deep, build, questions };
@@ -11,7 +11,7 @@ export const pipe = createPipeline(repo);
 export const REPO = 'https://github.com/JesunAhmadUshno/rag-foundation';
 export const blob = (p) => `${REPO}/blob/main/${p}`;
 export const f3 = (x) => (x == null ? '–' : x.toFixed(3));
-export const RECORDED = `recorded ${repo.recorded['level-3-deep'].date}, ${repo.recorded['level-3-deep'].python}`;
+export const RECORDED = `recorded ${repo.recorded.deep.date}, ${repo.recorded.deep.python}`;
 
 export const MODE_LABEL = {
   bm25: 'BM25', vector: 'TF-IDF vector', hybrid: 'Hybrid (RRF)', hybrid_rerank: 'Hybrid + rerank',

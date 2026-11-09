@@ -28,7 +28,7 @@ Repository: https://github.com/JesunAhmadUshno/rag-foundation
 
 Past: framework RAG examples in the LangChain and LlamaIndex tutorial
 class already exist. The prior art and the problem history are recorded
-in DOSSIER.md and NOVELTY.md in the repo. The novelty claim there stays
+in PROPOSAL.md and PROPOSAL.md in the repo. The novelty claim there stays
 marked PROPOSED. This post makes no novelty claim beyond the measured
 work below.
 
@@ -41,7 +41,7 @@ scope in lexical form: deterministic query rewriting, a co-occurrence
 HyDE simulation, and bridge term multi-hop retrieval, each measured
 against the Build baselines on the same corpus.
 
-Future: the rest of the v2 Deep scope is named in ROADMAP.md in the
+Future: the rest of the v2 Deep scope is named in REPORT.md in the
 repo as the v1.1 backlog. It includes dense embeddings, LLM query
 rewriting and HyDE, learned or cross-encoder reranking, a larger real
 corpus, a data driven expansion table, and a chunk size study. None of
@@ -141,15 +141,15 @@ Tests: 17 Deep tests, 52 in total with Learn and Build.
   this set (0.958 against 1.000). That result is kept, not averaged
   away, and Deep modes do not reapply it.
 - Compressed Deep is not the full v2 Deep scope. The remainder is
-  the named v1.1 backlog in ROADMAP.md.
+  the named v1.1 backlog in REPORT.md.
 - The runs executed on the Muse VM, not the assigned BlackBoxV2 node.
 
 ## Where to go next
 
-- Tutorial: fanout/tutorial.md in the repo, a step-by-step module
+- Tutorial: docs/fanout/tutorial.md in the repo, a step-by-step module
   that runs all three levels and the full test suite.
 - Releases: v0.1 (Learn), v0.5 (Build), v1.0 (Learn, Build, compressed
   Deep) on the GitHub repo linked above.
-- Book chapter: "Retrieval Done Right" per SPEC.md, drafted as part
+- Book chapter: "Retrieval Done Right" per PROPOSAL.md, drafted as part
   of the fan-out set.
 - License: code Apache-2.0, tutorials CC BY 4.0.

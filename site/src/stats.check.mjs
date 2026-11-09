@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { bootstrapCI, pairedBootstrap, mcnemarExact } from './stats.js';
 
-const deep = JSON.parse(fs.readFileSync(new URL('../../level-3-deep/results_deep.json', import.meta.url)));
+const deep = JSON.parse(fs.readFileSync(new URL('../../results/results_deep.json', import.meta.url)));
 const hits = (cat, mode) => deep.per_question.filter((q) => q.category === cat).map((q) => (q.modes[mode].top1_hit_primary ? 1 : 0));
 
 // The bootstrap mean is the recorded top-1 accuracy, and the CI brackets it.

@@ -7,9 +7,9 @@ import { createPipeline, runEvaluation, MODES, vocabOverlap, leaveOwnKeysOut } f
 
 const read = (p) => JSON.parse(fs.readFileSync(new URL(p, import.meta.url)));
 const repo = read('./data/repo.json');
-const deep = read('../../level-3-deep/results_deep.json');
-const build = read('../../level-2-build/results_build.json');
-const questions = read('../../level-3-deep/questions_deep.json');
+const deep = read('../../results/results_deep.json');
+const build = read('../../results/results_build.json');
+const questions = read('../../experiments/questions_deep.json');
 
 const pipe = createPipeline(repo);
 assert.equal(pipe.chunks.length, deep.chunks, 'chunk count');
@@ -30,7 +30,7 @@ for (const row of build.per_question) {
   const { docs } = pipe.rankings(questions.find((q) => q.id === row.id).question, { deep: false });
   for (const m of ['bm25', 'vector', 'hybrid', 'hybrid_rerank']) assert.deepEqual(docs[m], row[m].ranked_docs, `build ${row.id} ${m}`);
 }
-// The Build demo query printed by `python level-2-build/run_build.py` (answer, citation and stage scores).
+// The Build demo query printed by `python src/run_build.py` (answer, citation and stage scores).
 const dq = 'How many books can members borrow from the Northlight library?';
 const ds = pipe.rankings(dq, { deep: false }).stages;
 const demo = pipe.answer(dq, ds.hybrid_rerank);
@@ -41,7 +41,7 @@ assert.deepEqual(ds.vector.slice(0, 3).map((h) => h.score.toFixed(4)), ['0.3095'
 
 // Vocabulary overlap heatmap: must equal the same count made with the Python tokeniser.
 const py = JSON.parse(execFileSync('python3', ['-c', `
-import json, sys; sys.path.insert(0, 'level-2-build')
+import json, sys; sys.path.insert(0, 'src')
 from corpus import DOCUMENTS; from pipeline import content_tokens
 s = [set(content_tokens(d["text"])) for d in DOCUMENTS]
 print(json.dumps([[len(a & b) for b in s] for a in s]))`], { cwd: new URL('../..', import.meta.url) }).toString());

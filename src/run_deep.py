@@ -1,8 +1,8 @@
 """Run the Level 3 Deep evaluation.
 
-Usage: python level-3-deep/run_deep.py
+Usage: python src/run_deep.py
 
-The 42 questions in questions_deep.json (24 Build regression, 10
+The 42 questions in experiments/questions_deep.json (24 Build regression, 10
 paraphrase, 8 multi-hop, all labelled before the run) are run
 through the four Build modes and the four Deep modes on the same
 20-document, 41-chunk corpus. Single document categories report
@@ -10,8 +10,7 @@ top-1, recall at 3, and MRR per mode and per category. The
 multi-hop category also reports document recall at 3 and 5 and
 pair completeness at 3 and 5. The full per-question record,
 including rewrite expansions, hypothetical documents, and
-multi-hop traces, is written to results_deep.json beside this
-file. Exit code 0 when the run completes: a miss is data.
+multi-hop traces, is written to results/results_deep.json. Exit code 0 when the run completes: a miss is data.
 """
 
 import json
@@ -20,7 +19,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(os.path.dirname(HERE), "level-2-build"))
+ROOT = os.path.dirname(HERE)
 
 from corpus import DOCUMENTS  # noqa: E402
 from deep_pipeline import DeepPipeline, evaluate_doc_pairs  # noqa: E402
@@ -40,7 +39,7 @@ CATEGORIES = ("regression", "paraphrase", "multihop")
 
 
 def load_questions():
-    with open(os.path.join(HERE, "questions_deep.json"), encoding="utf-8") as fh:
+    with open(os.path.join(ROOT, "experiments", "questions_deep.json"), encoding="utf-8") as fh:
         return json.load(fh)
 
 
@@ -174,7 +173,7 @@ def main():
         "summary": summary,
         "per_question": per_question,
     }
-    out_path = os.path.join(HERE, "results_deep.json")
+    out_path = os.path.join(ROOT, "results", "results_deep.json")
     with open(out_path, "w", encoding="utf-8") as fh:
         json.dump(results, fh, indent=2, sort_keys=True)
     print(f"results written: {out_path}")

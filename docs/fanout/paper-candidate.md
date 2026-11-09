@@ -96,7 +96,7 @@ Build reranker), and the paper must state it that way.
 
 ## Venue class note
 
-Per SPEC.md, the paper angle for P05 is a hybrid search ablation
+Per PROPOSAL.md, the paper angle for P05 is a hybrid search ablation
 (vector only, BM25 only, hybrid, hybrid plus rerank, one table),
 extended at Deep with the rewriting before and after table. Venue
 class is a workshop or conference in retrieval or NLP, or a journal
@@ -121,7 +121,7 @@ and remain Jesun's call under the free-only rule.
   reported as a result.
 - Compressed Deep only. The v1.1 backlog (dense embeddings, LLM
   rewriting and HyDE, learned reranking, larger real corpus, chunk
-  size study) is future work, named in ROADMAP.md in the repo.
+  size study) is future work, named in REPORT.md in the repo.
 
 ## Submission gate
 

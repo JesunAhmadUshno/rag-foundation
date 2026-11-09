@@ -1,5 +1,5 @@
 """Level 3 Deep tests. The HyDE expectations were computed by hand
-from the co-occurrence formula in level-3-deep/deep_pipeline.py
+from the co-occurrence formula in src/deep_pipeline.py
 before the assertions were written (worked in the comments). The
 crafted multi-hop corpus is built so hop 1 cannot reach the target
 document at all: the target shares no query term, only bridge
@@ -12,8 +12,7 @@ import sys
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "level-3-deep"))
-sys.path.insert(0, os.path.join(ROOT, "level-2-build"))
+sys.path.insert(0, os.path.join(ROOT, "src"))
 
 from corpus import DOCUMENTS  # noqa: E402
 from deep_pipeline import (  # noqa: E402
@@ -104,7 +103,7 @@ class TestDeepModesOnCorpus(unittest.TestCase):
     def setUpClass(cls):
         cls.pipe = DeepPipeline(DOCUMENTS)
         with open(
-            os.path.join(ROOT, "level-3-deep", "questions_deep.json"),
+            os.path.join(ROOT, "experiments", "questions_deep.json"),
             encoding="utf-8",
         ) as fh:
             cls.questions = json.load(fh)
