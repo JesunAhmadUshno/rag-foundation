@@ -32,7 +32,7 @@ jobs:
         run: python src/run_deep.py
       - name: Results regenerate unchanged from the code and question sets
         run: git diff --exit-code results/
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Uncertainty and leakage checks behind the headline
