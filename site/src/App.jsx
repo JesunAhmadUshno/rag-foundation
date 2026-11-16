@@ -60,7 +60,7 @@ export default function App() {
   useReveal();
   const [query, setQuery] = useState(questions.find((q) => q.id === 'p01-condensation').question);
   return (
-    <div className="wrap">
+    <div className="wrap"><a className="skip" href="#top">Skip to content</a>
       <MenuBar />
       <div className="glow" aria-hidden="true" />
       <Hero />
@@ -76,7 +76,7 @@ export default function App() {
       <footer>
         Code: Apache-2.0. Recorded numbers are read from <code>results_build.json</code> and <code>results_deep.json</code> at build time; the corpus and constants are exported from the Python modules.
         The retrieval runs in your browser, and the build fails unless it reproduces every recorded ranking.
-      </footer>
+      <nav className="support" aria-label="Support this work"><a href="https://github.com/sponsors/JesunAhmadUshno">Sponsor this work</a><a href="https://github.com/sponsors/JesunAhmadUshno">Donate</a><a href="https://buymeacoffee.com/jesun">Buy Me a Coffee</a><a href="https://calendly.com/jesunahmadushno/30min">Work with me</a></nav></footer>
     </div>
   );
 }
@@ -84,7 +84,7 @@ export default function App() {
 function Hero() {
   const s = deep.summary;
   return (
-    <header className="card hero window" id="top" data-title="rag-foundation — README.md">
+    <header className="card hero window" id="top" data-title="rag-foundation - README.md">
       <div className="head">
         <p className="eyebrow">Pure Python standard library · no models, no services</p>
         <Recorded />
@@ -129,7 +129,7 @@ function Pipeline({ query }) {
   const W = 880, H = 200, bw = 128, bh = 62;
   const edges = [[0, 1], [1, 2], [1, 3], [2, 4], [3, 4], [4, 5], [5, 6]];
   return (
-    <section id="pipeline" className="card window reveal" data-title="pipeline.md — Build pipeline">
+    <section id="pipeline" className="card window reveal" data-title="pipeline.md - Build pipeline">
       <div className="head">
         <div>
           <p className="eyebrow">Pipeline explainer</p>
@@ -176,7 +176,7 @@ function Corpus() {
   const shared = useMemo(() => { const b = new Set(pipe.tok(docs[j].text)); return [...new Set(pipe.tok(docs[i].text))].filter((t) => b.has(t)); }, [i, j, docs]);
   const qCount = (id) => questions.filter((q) => expectedOf(q).includes(id)).length;
   return (
-    <section id="corpus" className="card window reveal" data-title="corpus.py — 20 documents">
+    <section id="corpus" className="card window reveal" data-title="corpus.py - 20 documents">
       <div className="head">
         <div>
           <p className="eyebrow">Corpus browser</p>
@@ -251,7 +251,7 @@ function Limits() {
     'Answers are judged by reading. There is no answer-level metric and a single author labelled every question.',
   ];
   return (
-    <section id="limits" className="card window reveal" data-title="REPORT.md — limits and backlog">
+    <section id="limits" className="card window reveal" data-title="REPORT.md - limits and backlog">
       <p className="eyebrow">Limits and roadmap</p>
       <h2>What this does <em>not</em> show.</h2>
       <div className="grid2" style={{ marginTop: 16 }}>
