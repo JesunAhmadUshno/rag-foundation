@@ -17,7 +17,7 @@ export function Playground({ query, setQuery }) {
   const vecById = new Map(r.stages.vector.map((h, i) => [h.chunk.id, [h.score, i + 1]]));
   const terms = pipe.tok(query);
   return (
-    <section id="playground" className="card window reveal" data-title="query.py — live retrieval">
+    <section id="playground" className="card window reveal" data-title="query.py - live retrieval">
       <div className="head">
         <div>
           <p className="eyebrow">Query playground</p>
@@ -140,7 +140,7 @@ export function Ablation() {
   const t3 = mcnemarExact(hits('paraphrase', 'hyde'), hits('paraphrase', 'hybrid'));
   const bs = build.summary;
   return (
-    <section id="ablation" className="card window reveal" data-title="results_deep.json — ablation">
+    <section id="ablation" className="card window reveal" data-title="results_deep.json - ablation">
       <div className="head">
         <div>
           <p className="eyebrow">Ablation tables</p>
@@ -199,7 +199,7 @@ export function Explorer({ setQuery }) {
   const sel = byId[open];
   const selId = useId();
   return (
-    <section id="explorer" className="card window reveal" data-title="per_question.tsv — 42 rows">
+    <section id="explorer" className="card window reveal" data-title="per_question.tsv - 42 rows">
       <div className="head">
         <div>
           <p className="eyebrow">Per-question explorer</p>
@@ -276,7 +276,7 @@ export function Cases({ setQuery }) {
     },
   ];
   return (
-    <section id="cases" className="card window reveal" data-title="b10-pollen.case — failure modes">
+    <section id="cases" className="card window reveal" data-title="b10-pollen.case - failure modes">
       <p className="eyebrow">Case files</p>
       <h2>The failures, kept on the record and replayable.</h2>
       <div className="grid2" style={{ marginTop: 16 }}>
@@ -336,7 +336,7 @@ export function Sweep() {
   const y = (v) => pad.t + (1 - v) * (H - pad.t - pad.b);
   const series = [['rewrite', 'var(--good)', 'Rewrite'], ['hybrid', 'var(--primary)', 'Hybrid'], ['rerank', 'var(--warn)', 'Hybrid + rerank']];
   return (
-    <section id="sweep" className="card window reveal" data-title="sweep.py — sensitivity lab">
+    <section id="sweep" className="card window reveal" data-title="sweep.py - sensitivity lab">
       <div className="head">
         <div>
           <p className="eyebrow">Sensitivity lab</p>
